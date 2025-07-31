@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="icon"
+      sizes="192x192"
+      href="https://www.wix.com/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://www.wix.com/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="https://www.wix.com/favicon.ico"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Raleway:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>App Launch Website Template | WIX</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #FFFEF3;
+            color: #0B0B0B;
+            overflow-x: hidden;
+
+        }
+
+        section {
+            scroll-margin-top: 80px;
+            padding: 100px 20px;
+            width: 100% !important;
+        }
+
+        header{
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #FFFEF3;
+            padding: 1.4rem 3rem;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text {
+            font-size: 50px;
+        }
+
+        .logo-text a {
+            text-decoration: none;
+            color: #0B0B0B;
+            font-weight: 500;
+        }
+
+        nav ul{
+            display: flex;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #0B0B0B;
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            color: #1B5CDD;
+        }
+
+        .startBtn {
+            background-color: #0B0B0B;
+            color: #FFFFFF;
+            border: none;
+            padding: 6px 20px; 
+            border: 1px solid transparent;
+            border-radius: 50px;
+            cursor: pointer;
+        }
+
+        .startBtn:hover {
+            background-color: #FFFEF3;
+            color: #0B0B0B;
+            border: 1px solid #0B0B0B;
+        }
+
+        /* --- Hero Section --- */
+        .hero {
+            text-align: center;
+            background-color: #FFFEF3;
+            height: auto;
+        }
+
+        .hero-title {
+            font-size: 100px;
+            font-weight: 500;
+            letter-spacing: -0.05em;
+            color: #0B0B0B;
+            margin-top: 200px;
+            margin-bottom: 40px;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: -0.02em;
+            color: #0B0B0B;
+            overflow-wrap: break-word;
+            max-width: 500px;
+            margin: 0 auto 40px auto;
+            margin-bottom: 40px;
+        }
+
+        .hero-visuals {
+            position: relative;
+            width: 350px; /* Container for positioning the phone and cards */
+            height: 700px;
+            margin: 0 auto;
+        }
+
+        /* --- Phone Mockup --- */
+        .phone-mockup {
+            position: relative;
+            border: 15px solid #0B0B0B;
+            width: 575px;
+            height: 1500px;
+            background-color: #0B0B0B;
+            border-radius: 100px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .phone-screen {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .app-buttons {
+            position: absolute;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 0.8rem;
+            z-index: 10;
+        }
+
+        /* --- Floating UI Cards --- */
+        .float-card {
+            position: absolute;
+            border-radius: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        
+        .card-activity {
+            background-color: #FFF5C3;
+            width: 170px;
+            height: 170px;
+            top: 3%;
+            left: -38%;
+            align-content: center;
+            display: block;
+        }
+
+        .card-activity i {
+            font-size: 25px;
+            color: #1B5CDD;
+            margin-bottom: 25px;
+        }
+
+        .card-activity .line {
+            width: 90%;
+            height: 5px;
+            background-color: #1B5CDD;
+            border-radius: 4px;
+            margin-bottom: 10px;
+            margin-left: 5px;
+        }
+
+        .card-activity .line_ {
+            width: 50%;
+            height: 5px;
+            background-color: #1B5CDD;
+            border-radius: 4px;
+            margin-left: 30px;
+        }
+
+        .card-stats {
+            background-color: #D7D7D7;
+            width: 280px;
+            height: 150px;
+            top: 30%;
+            left: -59%;
+            gap: 2rem;
+        }
+
+        .card-stats .chart-circle {
+            width: 85px;
+            height: 85px;
+            border-radius: 50%;
+            border: 15px solid #BEC6D8;
+            border-left-color: #1B5CDD;
+            border-right-color: #1B5CDD;
+            border-bottom-color: #1B5CDD;
+            transform: rotate(-45deg);
+        }
+
+        .card-stats .chart-bars {
+            display: flex;
+            align-items: flex-end;
+            gap: 6px;
+            height: 70px;
+        }
+
+        .chart-bars .bar {
+            width: 15px;
+            background-color: #FFF5C3;
+            border-radius: 10px;
+            
+        }
+
+        .chart-bars .bar_2 {
+            background-color: #FFEBE3 !important;
+        }
+
+        .chart-bars .bar:nth-child(1) { height: 100%; }
+        .chart-bars .bar:nth-child(2) { height: 70%; }
+        .chart-bars .bar:nth-child(3) { height: 90%; }
+        .chart-bars .bar:nth-child(4) { height: 60%; }
+        .chart-bars .bar:nth-child(5) { height: 45%; }
+
+
+        .card-steps {
+            background-color: #FFEBE3;
+            width: 170px;
+            height: 170px;
+            top: 25%;
+            right: -100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding-left: 20px;
+            padding-top: 90px;
+        }
+        
+        .card-steps .steps-count {
+            font-size: 35px;
+            letter-spacing: -0.04em;
+            color: #1B5CDD;
+        }
+
+        .card-steps .steps-label {
+            font-size: 13px;
+            letter-spacing: -0.02em;
+            font-family: 'Inter', sans-serif;
+            color: #1B5CDD;
+        }
+
+        .card-progress {
+            background-color: #1B5CDD;
+            width: 320px;
+            height: 155px;
+            bottom: 12%;
+            right: -115%;
+            top: 52%;
+        }
+
+        .card-progress .progress-lines {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            flex-grow: 1;
+        }
+
+        .progress-lines span {
+            height: 9px;
+            width: 60% ;
+            background-color: #7695E0;
+            border-radius: 4px;
+            display: block;
+            position: relative;
+            overflow: hidden; 
+        }
+
+        .progress-lines span::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            border-radius: 4px;
+        }
+        .progress-lines span:nth-child(1) { 
+            margin-bottom: 15px;
+        }
+        .progress-lines span:nth-child(1)::before {
+            width: 30%;
+            background-color: #FFEBE3;
+        }
+
+      .progress-lines span:nth-child(2) {
+            background-color: #FFFFFF;
+            margin-bottom: 15px;
+        }
+
+        .progress-lines span:last-child { 
+            background-color: #FFF5C3;
+        }
+        
+        .card-progress .progress-circle {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            border: 15px solid #7695E0;
+            border-left-color: #FFFFFF;
+            border-right-color: #FFF5C3;
+            border-bottom-color: #FFFFFF;
+            border-top-color: #fff8f5;
+            background-color: transparent;
+        }
+
+        /* About section */
+        .about {
+            background-color: #1B5CDD;
+            position: relative;
+            margin-top: 100px; /* overlap the phone card */
+            z-index: 2; 
+            overflow: hidden;
+        }
+
+        .about h3 {
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+            margin-left: 220px;
+        }
+
+        .about p {
+            font-size: 80px;
+            letter-spacing: -0.05em;
+            color: #FFFFFF;
+            max-width: 100%;
+            margin-left: 220px;
+        }
+
+        .video-frame {
+            width: 100%;
+            height: 500px;
+            margin-left: -40%;
+            margin-top: 80px;
+            position: relative; /* Needed for absolute text positioning */
+            overflow: hidden; /* Ensure rounded corners work properly */
+            background-color: #0B0B0B;
+            border-radius: 100px;
+            border: 15px solid #0B0B0B;
+        }
+
+        .video-frame video {
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
+            object-fit: cover;
+        }
+
+        .video-text {
+            position: absolute;
+            top: 60px;
+            right: 60px;
+            text-align: end;
+            font-family: 'Inter', sans-serif;
+            z-index: 10; /* Ensures that the text appears above video */
+        }
+
+        .video-text .text {
+            font-size: 16px;
+            margin-bottom: 80px;
+            color: #0B0B0B;
+            font-weight: 700;
+        }
+
+        .video-text .time {
+            font-size: 16px;
+            color: #0B0B0B;
+            font-weight: 700;
+        }
+
+        /* Classes section */
+        #classes {
+            background-color: #0B0B0B;
+            height: 2230px;
+        }
+
+        #classes h4 {
+            font-size: 80px;
+            letter-spacing: -0.05em;
+            color: #FFFFFF;
+            text-align: left;
+            margin-bottom: 100px;
+            font-weight: 500;
+            margin-left: 50px;
+        }
+
+        #classes p {
+            font-size: 1.1rem;
+            color: #FFFFFF;
+            letter-spacing: -0.02em;
+            font-family: 'Inter', sans-serif;
+            text-align: left;
+            margin-left: 50px;
+            margin-top: 50px;
+            margin-bottom: 40px;
+        }
+
+        #classes hr {
+            border: none;
+            height: 1px;
+            background-color: #FFFFFF;
+            width: 100vw; 
+            position: relative;
+            left: 50%; 
+            transform: translateX(-50%);
+            margin: 0;
+        }
+
+        #classes a {
+            display: inline-block;
+            font-family: 'Inter', sans-serif;
+            font-size: 18px;
+            background-color: #FFFFFF;
+            color: #0B0B0B;
+            padding: 10px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            margin-left: 50px;
+            margin-bottom: 100px;
+        }
+
+        #classes a:hover {
+            background-color: #0B0B0B;
+            color: #FFFFFF;
+            border: 1px solid #FFFFFF;
+        }
+
+        #classes .column {
+            height: 390px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            padding: 30px 0;
+            gap: 50px; 
+        }
+
+        #classes .column span {
+            flex-basis: 40px; 
+            flex-shrink: 0;   
+            font-size: 18px;
+            font-family: 'Inter', sans-serif;
+            color: #FFFFFF;
+            font-weight: 500;
+            margin-left: 50px;
+            margin-right: 70px; 
+        }
+
+        #classes .column h3 {
+            font-size: 80px;
+            letter-spacing: -0.05em;
+            color: #B0B0B0;
+            font-weight: 500;
+            margin-right: 100px;
+            white-space: nowrap; /* Prevents title from wrapping */
+        }
+
+        #classes .column p {
+            width: 100%;
+            font-size: 18px;
+            letter-spacing: -0.02em;
+            color: #B0B0B0;
+            font-weight: 500;
+            margin-right: 100px;
+            white-space: nowrap; /* Prevents description from wrapping */
+        }
+
+        #classes .column img {
+            margin-top: 0;
+            margin-bottom: 0;
+            object-fit: cover;  
+            width: 350px;       
+            height: 360px;      
+        }        
+
+        .column_1 img{
+            margin-right: 0 !important; /* Ensures no extra margin on the right */
+        }
+
+        .column_1 p {
+            margin-right: 25px !important; /* Ensures no extra margin on the right */
+        }
+
+        .column_1 h3 {
+            margin-right: 0 !important; /* Ensures no extra margin on the right */
+        }
+
+        /* Exploration Section */
+        .exploration {
+            background-color: #FFFEF3;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .exploration h2 {
+            font-size: 80px;
+            letter-spacing: -0.05em;
+            color: #0B0B0B;
+            margin-bottom: 50px;
+            font-weight: 500;
+        }
+
+        .exploration p {
+            font-size: 18px;
+            color: #0B0B0B;
+            letter-spacing: -0.02em;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            margin-bottom: 40px;
+            max-width: 600px; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Testimonials */
+        .testimonials{
+            background-image: url(images/84770f_dde9669cbd3e4aa8b30dab432429de0b~mv2.avif);
+            background-position: cover;
+            background-size: cover;
+            background-position: 50% 50%;
+            height: 1027px;
+            color: #0B0B0B;
+            position: relative;
+        }
+
+        .testimonials-contents{
+            background-color: #FFEBE3;
+            width: 60%;
+            height: 750px;
+            bottom: 0;
+            position: absolute;
+            right: 0;
+            padding: 40px;
+        }
+
+        .testimonials h6{
+            font-size: 80px;
+            letter-spacing: -0.05em;
+            font-weight: lighter;
+            width: 100%;
+            margin-bottom: 100px;
+            margin-top: 60px;
+        }
+
+        /* Testimonials Slideshow */
+        .slides-container {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+        }
+
+        .testimony-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+        }
+
+        .testimony-slide p {
+            font-size: 40px;
+            color: #0B0B0B;
+            letter-spacing: -0.04em;
+            margin-bottom: 40px;
+            max-width: 100%;
+            text-align: left;
+        }
+
+        .testimony-slide span {
+            font-size: 17px;
+            font-family: 'Inter', sans-serif;
+            text-align: left;
+        }
+
+        /* Slideshow navigation dots */
+        .slideshow-dots {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 12px;
+        }
+
+        .dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #0B0B0B;
+            opacity: 0.3;
+            cursor: pointer;
+            transition: opacity 0.3s ease;
+        }
+
+        .dot.active {
+            opacity: 1;
+        }
+
+        /* Radio buttons for slideshow */
+        .slide-radio {
+            display: none;
+        }
+
+        #slide-1:checked ~ .slides-container .slide-1,
+        #slide-2:checked ~ .slides-container .slide-2,
+        #slide-3:checked ~ .slides-container .slide-3 {
+            opacity: 1;
+        }
+
+        #slide-1:checked ~ .slideshow-dots .dot-1,
+        #slide-2:checked ~ .slideshow-dots .dot-2,
+        #slide-3:checked ~ .slideshow-dots .dot-3 {
+            opacity: 1;
+        }
+
+        /* Subscribe section */
+        .subscribe {
+            background-color: #FFF5C3;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        .subscribe h5 {
+            font-weight: 500;
+            letter-spacing: -0.05em;
+            font-size: 5rem;
+            color: #0B0B0B;
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        .subscribe p {
+            font-size: 1.1rem;
+            color: #0B0B0B;
+            letter-spacing: -0.02em;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            margin-bottom: 40px;
+            max-width: 450px; 
+        }
+
+        .subscribe form {
+        /* flexbox is used to manage form items */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 500px; /* Max-width for the form */
+        }
+
+        /* --- Styles for the floating label --- */
+        .form-group {
+            position: relative;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+
+        .subscribe form #email{
+            width: 100%;
+            padding: 10px 25px;
+            border: 1px solid #0B0B0B;
+            background-color: transparent;
+            border-radius: 50px;
+            font-size: 1rem;
+            margin: 10px auto;
+            box-sizing: border-box; /* Important for width calculation */
+        }
+
+        .subscribe form #email:hover {
+            border: 1px solid #1B5CDD;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 25px;
+            cursor: pointer;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 15px;
+            height: 15px;
+            cursor: pointer;
+        }
+
+        .checkbox-group label {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            margin-left: 10px;
+            color: #0B0B0B;
+            cursor: pointer;
+        }
+        
+        .sub_btn {
+            background-color: #0B0B0B;
+            color: #FFFFFF;
+            border: none;
+            padding: 15px 65px; 
+            border: 1px solid transparent;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 50px;
+        }
+
+        .sub_btn:hover {
+            background-color: #FFFEF3;
+            color: #0B0B0B;
+            border: 1px solid #0B0B0B;
+        }
+
+        /* Start Section */
+        .start {
+            background-image: url('images/c837a6_55cfec64830e4472a40ba44abebd7bff~mv2.avif');
+            background-size: cover;
+            background-position: top center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: auto;
+            padding: 100px 20px;
+            color: #FFFFFF;
+        }
+
+        .start h4 {
+            font-size: 80px;
+            margin-bottom: 300px;
+            font-weight: 500;
+            margin-top: 200px;
+        }
+
+        .start p {
+            font-size: 18px;
+            letter-spacing: -0.02em;
+            margin-bottom: 40px;
+            font-family: 'Inter', sans-serif;
+            max-width: 600px;
+        }
+
+        .start .images {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 100px;
+        }
+       
+        /* --- Footer Styles --- */
+        .site-footer {
+            background-color: #FFFEF3;
+            padding: 80px 60px 40px 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+            font-family:'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .footer-brand-logo {
+            text-align: center;
+            margin-bottom: 100px;
+        }
+
+        .footer-brand-logo h2 {
+            font-family: 'Lora', serif;
+            font-size: 350px;
+            letter-spacing: -0.04em;
+            font-weight: 500;
+            color: #0B0B0B;
+            margin: 0;
+        }
+        .footer-brand-logo h2 a {
+            text-decoration: none;
+            color: #0B0B0B;
+        }
+
+        .footer-content {
+            display: grid;
+            /* A flexible grid that wraps on smaller screens */
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            padding-bottom: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-column h4 {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 60px;
+            color: #0B0B0B;
+        }
+
+        .footer-column p,
+        .footer-column ul li {
+            font-size: 18px;
+            font-weight: 500;
+            color: #0B0B0B;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-column a {
+            color: #0B0B0B;
+            text-decoration: none;
+        }
+
+        .footer-column.apps {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            margin-top: 50px;
+        }
+        
+        .qr-code {
+            width: 95px;
+            height: 95px;
+            background-color: #FFFFFF;
+            border: 1px solid #B2B2B2;
+            border-radius: 5px;
+        }
+
+        .footer-bottom {
+            padding-top: 30px;
+            text-align: left;
+            font-size: 18px;
+            color: #0B0B0B;
+            font-family:'Inter', sans-serif;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+
+        .footer-bottom a {
+            text-decoration: underline;
+            color: #0B0B0B;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1 class="logo-text"><a href="index.html">Sculpty</a></h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#classes">Classes</a></li>
+                <li><a href="#subscribe">Subscribe</a></li>
+                <li><a href="#start" class="btn startBtn">Start Free Trial</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1 class="hero-title">Revolutionize Your Fitness.</h1>
+        <p class="hero-subtitle">Start your journey to a healthier,<br>stronger you with our fitness app</p>
+        <div class="hero-visuals">
+            <div class="phone-mockup">
+                <img src="images/GettyImages-1319678309.avif" alt="Woman exercising in the app" class="phone-screen">
+                
+                <div class="app-buttons">
+                    <img src="images/apple.avif" alt="Download on the App Store">
+                    <img src="images/Google.avif" alt="Get it on Google Play">
+                </div>
+            </div>
+            <div class="float-card card-activity">
+                <i class="fa-solid fa-bell"></i>
+                <div class="line"></div>
+                <div class="line_"></div>
+            </div>
+
+            <div class="float-card card-stats">
+                <div class="chart-circle"></div>
+                <div class="chart-bars">
+                    <div class="bar bar_"></div>
+                    <div class="bar bar_1"></div>
+                    <div class="bar bar_"></div>
+                    <div class="bar bar_1"></div>
+                    <div class="bar bar_2"></div>
+                </div>
+            </div>
+
+            <div class="float-card card-steps">
+                <span class="steps-count">2K</span>
+                <span class="steps-label">Steps</span>
+            </div>
+
+            <div class="float-card card-progress">
+                    <div class="progress-lines">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="progress-circle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+     <section id="about" class="about">
+        <h3>How Sculpty fuels your fitness</h3>
+        <p>
+            I'm a paragraph. Click here to<br> add your own text and edit me.<br> It's easy. Just click “Edit Text”<br> or double click me to add your<br> own content and make changes<br> to the font.
+        </p>
+        <div class="video-frame">
+            <video controls autoplay muted playsinline>
+                <source src="videos/3327806-hd_1920_1080_24fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="video-text">
+                <p class="text">Yoga<br>with Sarah<br>45 mins</p>
+                <p class="time">00:21</p>
+            </div>
+        </div>
+     </section>
+
+    <!-- Classes Section -->
+     <section id="classes">
+        <h4>
+            Explore<br>our classes
+        </h4>
+        <p>Describe your service here. What makes it great?<br> Use short catchy text to tell people what you offer,<br> and the benefits they will receive. A great description<br>gets readers in the mood, and makes them more<br> likely to go ahead and book.</p>
+        <a href="index.html">Start Now</a>
+        <hr>
+        <div class="column column_1">
+            <span>01</span>
+            <h3>30-Day HIIT</h3>
+            <p>Use this area to describe one of your<br>services.</p>
+            <img src="images/hiit.avif" alt="30-Day HIIT">
+        </div>
+        <hr>
+        <div class="column column_2">
+            <span>02</span>
+            <h3>Cardio</h3>
+            <p>Use this area to describe one of your<br>services.</p>
+            <img src="images/cardio.avif" alt="Cardio">
+        </div>
+        <hr>
+        <div class="column column_3">
+            <span>03</span>
+            <h3>Pilates</h3>
+            <p>Use this area to describe one of your<br>services.</p>
+            <img src="images/pilates.avif" alt="Pilates">
+        </div>
+        <hr>
+        <div class="column column_4">
+            <span>04</span>
+            <h3>Yoga</h3>
+            <p>Use this area to describe one of your<br>services.</p>
+            <img src="images/yoga.avif" alt="Yoga">
+        </div>
+     </section>
+
+    <!-- Start Section -->
+     <section id="start" class="start">
+        <h4>Ready to transform<br>your life?</h4>
+        <p>I'm a paragraph. Click here to add your<br> own text and edit me.</p>
+        <div class="images">
+            <img src="images/apple.avif" alt="Download on the App Store">
+            <img src="images/Google.avif" alt="Get it on Google Play">
+        </div>
+     </section>
+
+    <!-- Exploration -->
+    <section class="exploration">
+        <h2>Explore the app</h2>
+        <p>Discover personalized fitness plans, real-time progress tracking, community support and more.</p>
+        <!-- <div class="explore-links">
+            <a href="#">Features</a>
+            <a href="#">Testimonials</a>
+            <a href="#">Blog</a>
+        </div> -->
+    </section>
+    
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="testimonials-contents">
+            <h6>Hear what our community has to say</h6>
+            
+            <!-- Slideshow radio buttons -->
+            <input type="radio" name="slideshow" id="slide-1" class="slide-radio" checked>
+            <input type="radio" name="slideshow" id="slide-2" class="slide-radio">
+            <input type="radio" name="slideshow" id="slide-3" class="slide-radio">
+            
+            <!-- Slides container -->
+            <div class="slides-container">
+                <div class="testimony-slide slide-1">
+                    <p>“I'm a testimonial. Click to edit me and add<br>text that says something nice about you and<br>your services. Let your customers review you<br>and tell their friends how great you are.”</p>
+                    <span>Karel Rachim</span>
+                </div>
+                <div class="testimony-slide slide-2">
+                    <p>“I'm a testimonial. Click to edit me and add<br>text that says something nice about you and<br>your services. Let your customers review you<br>and tell their friends how great you are.”</p>
+                    <span>Naya Denner</span>
+                </div>
+                <div class="testimony-slide slide-3">
+                    <p>“I'm a testimonial. Click to edit me and add<br>text that says something nice about you and<br>your services. Let your customers review you<br>and tell their friends how great you are.”</p>
+                    <span>Danielle Yliuay</span>
+                </div>
+            </div>
+            
+            <!-- Navigation dots -->
+            <div class="slideshow-dots">
+                <label for="slide-1" class="dot dot-1 active"></label>
+                <label for="slide-2" class="dot dot-2"></label>
+                <label for="slide-3" class="dot dot-3"></label>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe Section -->
+     <section id="subscribe" class="subscribe">
+        <h5>Never miss a thing</h5>
+        <p>Get updates and info to keep you going on your<br> fitness journey.</p>
+        
+        <form action="#">
+            <div class="form-group">
+                <label for="email">Enter your email address *</label>
+                <input type="email" name="email" id="email" required>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" name="agreement" id="agreement" required>
+                <label for="agreement">Yes, subscribe me to your newsletter.*</label>
+            </div>
+            
+            <button type="submit" class="sub_btn">Submit</button>
+        </form>
+    </section>
+
+     <!-- Footer -->
+      <footer class="site-footer">
+        <div class="footer-brand-logo">
+            <h2><a href="index.html">Sculpty</a></h2>
+        </div>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h4>Address</h4>
+                <p>500 Terry Francine Street,<br>San Francisco, CA 94158</p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms and<br> Conditions</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Social</h4>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">YouTube</a></li>
+                    <li><a href="#">TikTok</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column apps">
+                <img src="images/qrCode.avif" alt="QR Code" class="qr-code">
+                <div class="apps">
+                    <img src="images/Google.avif" alt="Get it on Google Play">
+                    <img src="images/apple.avif" alt="Download on the App Store">
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2035 by Sculpty. Powered and secured by <a href="index.html">Wix</a></p>
+        </div>
+    </footer>
+    
+</body>
+</html>
