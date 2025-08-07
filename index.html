@@ -900,6 +900,261 @@
             color: #0B0B0B;
             font-weight: 500;
         }
+        
+        /* =============== RESPONSIVE MEDIA QUERIES =============== */
+        /* Tablet and Medium Screens */
+        @media (max-width: 1200px) {
+            .hero-title {
+                font-size: 80px;
+            }
+            
+            .about p {
+                font-size: 60px;
+            }
+            
+            #classes h4, #classes .column h3 {
+                font-size: 60px;
+            }
+            
+            .exploration h2, .testimonials h6, .subscribe h5, .start h4 {
+                font-size: 60px;
+            }
+            
+            .testimonials-contents {
+                width: 70%;
+                padding: 30px;
+            }
+            
+            .testimony-slide p {
+                font-size: 30px;
+            }
+            
+            .footer-brand-logo h2 {
+                font-size: 250px;
+            }
+        }
+        
+        /* Small Tablets and Large Phones */
+        @media (max-width: 992px) {
+            .hero-title {
+                font-size: 60px;
+                margin-top: 150px;
+            }
+            
+            .about h3, .about p {
+                margin-left: 100px;
+            }
+            
+            .about p {
+                font-size: 50px;
+            }
+            
+            .video-frame {
+                margin-left: -20%;
+            }
+            
+            #classes {
+                height: auto;
+            }
+            
+            #classes .column {
+                flex-direction: column;
+                height: auto;
+                padding: 50px 20px;
+            }
+            
+            #classes .column span {
+                margin: 0 0 20px 0;
+                align-self: flex-start;
+            }
+            
+            #classes .column h3, #classes .column p {
+                margin-right: 0;
+                text-align: center;
+                white-space: normal;
+            }
+            
+            #classes .column p {
+                margin-left: 0;
+                margin-bottom: 30px;
+            }
+            
+            .testimonials-contents {
+                width: 80%;
+            }
+            
+            .footer-brand-logo h2 {
+                font-size: 200px;
+            }
+        }
+        
+        /* Mobile Phones */
+        @media (max-width: 768px) {
+            header {
+                padding: 1rem;
+                flex-direction: column;
+            }
+            
+            .logo-text {
+                margin-bottom: 15px;
+                font-size: 40px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px 10px;
+            }
+            
+            .hero-title {
+                font-size: 40px;
+                margin-top: 120px;
+            }
+            
+            .hero-subtitle {
+                font-size: 18px;
+            }
+            
+            .phone-mockup {
+                width: 90%;
+                height: auto;
+                max-width: 350px;
+                border-radius: 50px;
+                border-width: 10px;
+            }
+            
+            .float-card {
+                display: none !important;
+            }
+            
+            .about {
+                margin-top: 50px;
+            }
+            
+            .about h3, .about p {
+                margin-left: 20px;
+            }
+            
+            .about p {
+                font-size: 40px;
+            }
+            
+            .video-frame {
+                height: 300px;
+                margin-left: -10%;
+                border-radius: 50px;
+                border-width: 10px;
+            }
+            
+            .video-text {
+                top: 20px;
+                right: 20px;
+            }
+            
+            #classes h4, #classes .column h3 {
+                font-size: 40px;
+                margin-left: 20px;
+            }
+            
+            #classes p {
+                margin-left: 20px;
+                margin-right: 20px;
+            }
+            
+            #classes a {
+                margin-left: 20px;
+            }
+            
+            .exploration h2, .testimonials h6, .subscribe h5, .start h4 {
+                font-size: 40px;
+            }
+            
+            .testimonials {
+                height: 600px;
+            }
+            
+            .testimonials-contents {
+                width: 100%;
+                height: auto;
+                padding: 20px;
+                position: relative;
+                top: auto;
+                bottom: 0;
+            }
+            
+            .testimony-slide p {
+                font-size: 24px;
+            }
+            
+            .subscribe h5 {
+                font-size: 3rem;
+            }
+            
+            .start h4 {
+                margin-top: 100px;
+                margin-bottom: 100px;
+            }
+            
+            .footer-brand-logo h2 {
+                font-size: 120px;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-column.apps {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        
+        /* Small Phones */
+        @media (max-width: 576px) {
+            .hero-title {
+                font-size: 32px;
+                margin-top: 100px;
+            }
+            
+            .app-buttons img {
+                max-width: 120px;
+            }
+            
+            .about p {
+                font-size: 32px;
+            }
+            
+            .video-frame {
+                height: 250px;
+                margin-left: 0;
+                width: 100%;
+            }
+            
+            #classes .column img {
+                width: 100%;
+                max-width: 300px;
+                height: auto;
+            }
+            
+            .start .images {
+                flex-direction: column;
+            }
+            
+            .testimony-slide p {
+                font-size: 20px;
+            }
+            
+            .subscribe form {
+                padding: 0 20px;
+            }
+            
+            .footer-brand-logo {
+                margin-bottom: 50px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1032,11 +1287,6 @@
     <section class="exploration">
         <h2>Explore the app</h2>
         <p>Discover personalized fitness plans, real-time progress tracking, community support and more.</p>
-        <!-- <div class="explore-links">
-            <a href="#">Features</a>
-            <a href="#">Testimonials</a>
-            <a href="#">Blog</a>
-        </div> -->
     </section>
     
     <!-- Testimonials Section -->
