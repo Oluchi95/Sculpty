@@ -957,7 +957,6 @@
         /* Small Tablets and Large Phones */
         @media (max-width: 992px) {
             .hero-title {
-                font-size: 60px;
                 margin-top: 150px;
             }
             
@@ -1002,6 +1001,11 @@
             .testimonials-contents {
                 width: 80%;
             }
+
+            .slides-container {
+                position: relative;
+                height: 250px;
+            }
             
             .footer-brand-logo h2 {
                 font-size: 200px;
@@ -1045,12 +1049,11 @@
             }
             
             .hero-title {
-                font-size: 40px;
                 margin-top: 120px;
             }
             
             .hero-subtitle {
-                font-size: 18px;
+                font-size: 24px;
             }
             
             .phone-mockup {
@@ -1061,8 +1064,12 @@
                 border-width: 10px;
             }
             
-            .float-card {
-                display: none !important;
+            .app-buttons img:last-child {
+                display: none; 
+            }
+
+            .app-buttons img:first-child {
+                display: block; 
             }
             
             .about {
@@ -1151,12 +1158,15 @@
         /* Small Phones */
         @media (max-width: 576px) {
             .hero-title {
-                font-size: 32px;
                 margin-top: 100px;
             }
             
-            .app-buttons img {
-                max-width: 120px;
+            .app-buttons img:last-child {
+                display: none; 
+            }
+
+            .app-buttons img:first-child {
+                display: block; 
             }
             
             .about p {
